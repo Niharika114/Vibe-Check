@@ -15,7 +15,7 @@ MoodJournal AI is a local web application built with Streamlit that serves as a 
 🚀 Installation & Setup
 Follow these steps to get the project running on your local machine.
 1. Clone the Repository
-git clone https://github.com/yourusername/moodjournal-ai.git
+
 cd moodjournal-ai
 
 2. Create a Virtual Environment (Recommended)
