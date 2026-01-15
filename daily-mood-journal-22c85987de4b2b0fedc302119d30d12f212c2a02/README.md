@@ -1,73 +1,73 @@
-# Welcome to your Lovable project
+📖 MoodJournal AI
+MoodJournal AI is a local web application built with Streamlit that serves as a smart personal diary. It allows users to document their daily thoughts, automatically analyzes the emotional tone of their entries using Natural Language Processing (AI), tracks mood trends over time, and provides daily motivation.
+✨ Features
+ * 📝 Daily Journaling: A clean, distraction-free interface to write and save daily journal entries.
+ * 🧠 AI Mood Detection: Automatically analyzes the sentiment of your text (Positive, Negative, Neutral) using NLP techniques.
+ * 📊 Interactive Mood Charts: Visualizes your emotional trends over time using interactive line and pie charts.
+ * ✨ Daily Motivation: Displays a curated motivational quote to uplift your spirits based on your interaction.
+ * 🔒 Local Data Storage: All data is saved locally (CSV/SQLite), ensuring your private thoughts stay on your machine.
+🛠️ Tech Stack
+ * Language: Python 3.8+
+ * Framework: Streamlit (Web UI)
+ * Data Manipulation: Pandas
+ * Natural Language Processing: TextBlob or NLTK (VADER)
+ * Visualization: Plotly or Altair
+🚀 Installation & Setup
+Follow these steps to get the project running on your local machine.
+1. Clone the Repository
+git clone https://github.com/yourusername/moodjournal-ai.git
+cd moodjournal-ai
 
-## Project info
+2. Create a Virtual Environment (Recommended)
+It is best practice to use a virtual environment to manage dependencies.
+Windows:
+python -m venv venv
+venv\Scripts\activate
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+macOS/Linux:
+python3 -m venv venv
+source venv/bin/activate
 
-## How can I edit this code?
+3. Install Dependencies
+Install the required Python packages listed in the requirements file.
+pip install -r requirements.txt
 
-There are several ways of editing your application.
+> Note: If you do not have a requirements.txt yet, your core dependencies will likely be:
+> streamlit pandas textblob plotly
+> 
+4. Run the Application
+Launch the Streamlit server.
+streamlit run app.py
 
-**Use Lovable**
+The app should automatically open in your default web browser at http://localhost:8501.
+📂 Project Structure
+Here is the recommended folder structure for this application:
+moodjournal-ai/
+├── .streamlit/
+│   └── config.toml      # Streamlit theme configuration
+├── data/
+│   └── journal.csv      # Local database for entries
+├── src/
+│   ├── mood_analyzer.py # Logic for AI sentiment analysis
+│   └── utils.py         # Helper functions (date formatting, quotes)
+├── app.py               # Main application entry point
+├── requirements.txt     # Python dependencies
+└── README.md            # Project documentation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+📖 Usage Guide
+ * Write: Navigate to the "New Entry" tab. Select the date and type your thoughts into the text area. Click "Save Entry."
+ * Analyze: The AI will instantly calculate a polarity score (-1 to +1) for your entry.
+ * Track: Switch to the "Dashboard" tab to see a graph of how your mood has fluctuated over the week or month.
+ * Inspire: Check the sidebar or footer for your daily motivational quote.
+🔮 Future Roadmap
+ * [ ] User Authentication (Login/Signup).
+ * [ ] Advanced AI (OpenAI/Gemini API integration) for deeper psychological insights.
+ * [ ] Export data to PDF.
+ * [ ] Calendar view for entries.
+🤝 Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+ * Fork the project
+ * Create your feature branch (git checkout -b feature/AmazingFeature)
+ * Commit your changes (git commit -m 'Add some AmazingFeature')
+ * Push to the branch (git push origin feature/AmazingFeature)
+ * Open a Pull Request
