@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* Vibe Check - AI Mood Journal Design System */
+
+@layer base {
+  :root {
+    /* Warm cream background */
+    --background: 40 33% 97%;
+    --foreground: 20 20% 20%;
+
+    /* Soft cream cards */
+    --card: 40 40% 99%;
+    --card-foreground: 20 20% 20%;
+
+    --popover: 40 40% 99%;
+    --popover-foreground: 20 20% 20%;
+
+    /* Warm coral primary */
+    --primary: 12 76% 61%;
+    --primary-foreground: 40 40% 99%;
+
+    /* Soft peach secondary */
+    --secondary: 25 60% 94%;
+    --secondary-foreground: 20 20% 25%;
+
+    /* Muted warm gray */
+    --muted: 30 20% 92%;
+    --muted-foreground: 20 10% 50%;
+
+    /* Soft teal accent */
+    --accent: 174 42% 65%;
+    --accent-foreground: 174 60% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 25% 88%;
+    --input: 30 25% 88%;
+    --ring: 12 76% 61%;
+
+    --radius: 1rem;
+
+    /* Mood colors */
+    --mood-happy: 45 93% 63%;
+    --mood-calm: 174 42% 65%;
+    --mood-neutral: 30 20% 70%;
+    --mood-anxious: 35 90% 60%;
+    --mood-sad: 220 40% 60%;
+    --mood-angry: 0 70% 55%;
+
+    /* Gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(25 60% 94%) 0%, hsl(40 33% 97%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(40 40% 99%) 0%, hsl(30 35% 95%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(40 45% 99%) 0%, hsl(35 30% 96%) 100%);
+    --gradient-mood: linear-gradient(135deg, hsl(12 76% 61% / 0.1) 0%, hsl(174 42% 65% / 0.1) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(20 20% 20% / 0.08);
+    --shadow-card: 0 8px 32px -8px hsl(20 20% 20% / 0.1);
+    --shadow-elevated: 0 16px 48px -12px hsl(20 20% 20% / 0.15);
+
+    --sidebar-background: 40 33% 97%;
+    --sidebar-foreground: 20 20% 20%;
+    --sidebar-primary: 12 76% 61%;
+    --sidebar-primary-foreground: 40 40% 99%;
+    --sidebar-accent: 25 60% 94%;
+    --sidebar-accent-foreground: 20 20% 25%;
+    --sidebar-border: 30 25% 88%;
+    --sidebar-ring: 12 76% 61%;
+  }
+
+  .dark {
+    --background: 20 15% 10%;
+    --foreground: 40 20% 95%;
+
+    --card: 20 15% 14%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 20 15% 14%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 12 70% 55%;
+    --primary-foreground: 20 15% 10%;
+
+    --secondary: 20 15% 20%;
+    --secondary-foreground: 40 20% 90%;
+
+    --muted: 20 15% 18%;
+    --muted-foreground: 30 15% 60%;
+
+    --accent: 174 35% 45%;
+    --accent-foreground: 174 50% 95%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 15% 20%;
+    --input: 20 15% 20%;
+    --ring: 12 70% 55%;
+
+    --sidebar-background: 20 15% 10%;
+    --sidebar-foreground: 40 20% 95%;
+    --sidebar-primary: 12 70% 55%;
+    --sidebar-primary-foreground: 20 15% 10%;
+    --sidebar-accent: 20 15% 20%;
+    --sidebar-accent-foreground: 40 20% 90%;
+    --sidebar-border: 20 15% 20%;
+    --sidebar-ring: 12 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  .font-serif {
+    font-family: 'Crimson Pro', serif;
+  }
+}
+
+@layer utilities {
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-mood {
+    background: var(--gradient-mood);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out forwards;
+  }
+
+  .animate-pulse-soft {
+    animation: pulseSoft 2s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
