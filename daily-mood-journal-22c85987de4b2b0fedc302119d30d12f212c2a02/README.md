@@ -15,9 +15,7 @@ MoodJournal AI is a local web application built with Streamlit that serves as a 
 🚀 Installation & Setup
 Follow these steps to get the project running on your local machine.
 1. Clone the Repository
-
 cd moodjournal-ai
-
 2. Create a Virtual Environment (Recommended)
 It is best practice to use a virtual environment to manage dependencies.
 Windows:
@@ -39,7 +37,7 @@ pip install -r requirements.txt
 Launch the Streamlit server.
 streamlit run app.py
 
-The app should automatically open in your default web browser at http://localhost:8501.
+The app should automatically open in your default web browser.
 📂 Project Structure
 Here is the recommended folder structure for this application:
 moodjournal-ai/
